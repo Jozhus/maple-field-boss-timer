@@ -1,0 +1,16 @@
+.channelList {
+    width: 520px;
+    padding-top: 10%;
+    margin: auto;
+}
+.channelButton {
+    width: 100px;
+    margin: 2px;
+    background-color: rgb(1,1,1);
+    transition: background-color 2s;
+    border-radius: 3px;
+    float: left;
+}
+.channelText, .channelTime {
+    text-align: center;
+}
