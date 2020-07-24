@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "09e7a0ad94fa92cc0e402b8a607b7591",
+    "revision": "5dcdfa1f30263f7f255000cad4bb11cf",
     "url": "/maple-field-boss-timer/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maple-field-boss-timer/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "c4055ea39f12013510a5",
+    "revision": "573326021c4540138601",
     "url": "/maple-field-boss-timer/static/css/main.06937d12.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maple-field-boss-timer/static/js/2.c4e4cde9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c4055ea39f12013510a5",
-    "url": "/maple-field-boss-timer/static/js/main.81173cad.chunk.js"
+    "revision": "573326021c4540138601",
+    "url": "/maple-field-boss-timer/static/js/main.5e161a50.chunk.js"
   },
   {
     "revision": "92c84787d647f982e2bd",
