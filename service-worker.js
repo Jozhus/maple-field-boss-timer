@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/maple-field-boss-timer/precache-manifest.5da70f66d99e7ef1407cd0c8d98f1906.js"
+  "/maple-field-boss-timer/precache-manifest.3ab775f6422b2d79252764964325ff7d.js"
 );
 
 self.addEventListener('message', (event) => {
