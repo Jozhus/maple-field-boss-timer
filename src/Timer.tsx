@@ -71,6 +71,7 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
                 className="channelButton noselect"
                 style={{ backgroundColor: this.progress < 33 ? "#FF7676" : this.timeLeft > 30 ? "#FFFF66" : this.progress < 100 ? "#9dffb0" : "#ADD8E6" }}
                 onClick={() => { this.start() }}
+                onContextMenu={(e) => { e.preventDefault(); this.end(); }}
             >
                 <div className="channelText">
                     {this.props.text}
