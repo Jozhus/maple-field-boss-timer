@@ -48,10 +48,13 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
         this.setState({ time: newTime });
     }
 
-    private get timeLeft(): string {
-        let seconds: number = this.state.interval ? this.props.duration - this.state.time : 0
+    private get timeLeft(): number {
+        return this.state.interval ? this.props.duration - this.state.time : 0;
+    }
+
+    private get formattedTime(): string {
         let date = new Date(0);
-        date.setSeconds(seconds);
+        date.setSeconds(this.timeLeft);
         return date.toISOString().substr(14, 5);
     }
 
@@ -63,15 +66,15 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
     public render(): JSX.Element {
         return (
             <div
-                className="channelButton"
-                style={{ backgroundColor: this.progress < 33 ? "#FF7676" : this.progress < 66 ? "#FFFF66" : this.progress < 90 ? "#9dffb0" : "#ADD8E6" }}
+                className="channelButton noselect"
+                style={{ backgroundColor: this.progress < 33 ? "#FF7676" : this.timeLeft > 30 ? "#FFFF66" : this.progress < 100 ? "#9dffb0" : "#ADD8E6" }}
                 onClick={() => { this.start() }}
             >
                 <div className="channelText">
                     {this.props.text}
                 </div>
                 <div className="channelTime">
-                    {this.timeLeft}
+                    {this.formattedTime}
                 </div>
             </div>
         );

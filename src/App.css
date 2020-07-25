@@ -1,16 +1,39 @@
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
 .channelList {
     width: 520px;
-    padding-top: 10%;
-    margin: auto;
+    height: 500px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
+
 .channelButton {
     width: 100px;
     margin: 2px;
-    background-color: rgb(1,1,1);
     transition: background-color 2s;
     border-radius: 3px;
     float: left;
 }
+
 .channelText, .channelTime {
     text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: auto;
+    padding-left: 10px;
 }
