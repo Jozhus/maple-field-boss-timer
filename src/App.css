@@ -8,14 +8,32 @@
                                     supported by Chrome, Edge, Opera and Firefox */
 }
 
-.channelList {
-    width: 520px;
-    height: 500px;
-    padding-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
+
+.dropdown {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.trackList {
+    padding: 10px;
+    display: inline-block;
+}
+
+.channelList {
+    width: 540px;
+    height: 400px;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+
 
 .channelButton {
     width: 100px;

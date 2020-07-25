@@ -8,6 +8,7 @@ interface ITimerProps {
 
 interface ITimerState {
     time: number;
+    duration: number;
     interval?: NodeJS.Timeout;
 };
 
@@ -16,7 +17,8 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
         super(props);
 
         this.state = {
-            time: 0
+            time: 0,
+            duration: 0
         };
 
         this.tick = this.tick.bind(this);
@@ -30,7 +32,7 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
 
     private start(): void {
         this.end();
-        this.setState({ time: 0, interval: setInterval(this.tick, 1000) });
+        this.setState({ time: 0, duration: this.props.duration, interval: setInterval(this.tick, 1000) });
     }
 
     private end(): void {
@@ -40,7 +42,7 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
 
     private tick(): void {
         let newTime: number = this.state.time + 1;
-        if (newTime >= this.props.duration) {
+        if (newTime >= this.state.duration) {
             newTime = 0;
             this.end();
         }
@@ -49,7 +51,7 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
     }
 
     private get timeLeft(): number {
-        return this.state.interval ? this.props.duration - this.state.time : 0;
+        return this.state.interval ? this.state.duration - this.state.time : 0;
     }
 
     private get formattedTime(): string {
@@ -59,8 +61,8 @@ class Timer extends React.Component<ITimerProps, ITimerState> {
     }
 
     private get progress(): number {
-        if (this.props.duration === 0 || !this.state.interval) return 100;
-        return Math.floor(100 * this.state.time / this.props.duration)
+        if (this.state.duration === 0 || !this.state.interval) return 100;
+        return Math.floor(100 * this.state.time / this.state.duration)
     }
 
     public render(): JSX.Element {
