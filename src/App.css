@@ -22,18 +22,17 @@ body,
 }
 
 .trackList {
-    padding: 10px;
     display: inline-block;
 }
 
 .channelList {
-    width: 540px;
+    width: 520px;
     height: 400px;
     padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: inline-block;
 }
-
-
 
 .channelButton {
     width: 100px;

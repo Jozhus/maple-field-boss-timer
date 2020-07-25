@@ -21,10 +21,6 @@ class App extends Component<{}, IAppState> {
     this.createTrack = this.createTrack.bind(this);
   }
 
-  public componentDidMount(): void {
-    this.createTrack("Deo", 300);
-  }
-
   private createTrack(name: string, duration: number): void {
     const newTracks: JSX.Element[] = [...this.state.tracks];
 
@@ -41,7 +37,7 @@ class App extends Component<{}, IAppState> {
           toggle={() => { this.setState({ dropDownOpen: !this.state.dropDownOpen }) }}
         >
           <DropdownToggle caret>
-            Track another boss
+            Add a boss
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem
